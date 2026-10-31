@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="شركة الإيمان لنقل العفش بالمدينة المنورة. خدمات نقل الأثاث وفك وتركيب وتغليف العفش، ونقل المنازل والمكاتب. تواصل للاستفسار وطلب عرض سعر.">
+  <meta name="theme-color" content="#153b35">
+  <title>شركة الإيمان لنقل العفش بالمدينة المنورة</title>
+
+  <style>
+    :root {
+      --green: #153b35;
+      --green-light: #20594e;
+      --gold: #e9bc69;
+      --cream: #faf8f2;
+      --text: #243933;
+      --muted: #60716a;
+      --border: #e3e9e2;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid #c38a23;
+      outline-offset: 5px;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin-inline: auto;
+    }
+
+    .skip {
+      position: absolute;
+      top: -100px;
+      right: 15px;
+      z-index: 100;
+      padding: 10px 20px;
+      background: white;
+      color: var(--green);
+    }
+
+    .skip:focus { top: 10px; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(250, 248, 242, .97);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      border-radius: 14px;
+      font-size: 24px;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.4;
+      color: var(--green);
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: #9b6918; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 49px;
+      padding: 11px 24px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #283226;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .btn-green:hover { background: var(--green-light); }
+
+    .btn-outline {
+      border-color: #78968b;
+      color: var(--white);
+    }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      padding: 80px 0;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 10% 20%, #39725b 0, transparent 38%),
+        var(--green);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 14px;
+      border: 1px solid #729685;
+      border-radius: 30px;
+      font-size: 12px;
+      color: #f6deaf;
+    }
+
+    h1 {
+      font-size: clamp(31px, 4.5vw, 53px);
+      line-height: 1.5;
+      margin: 20px 0;
+      letter-spacing: -1px;
+    }
+
+    h1 span { color: var(--gold); }
+
+    .hero p {
+      color: #d5e3db;
+      max-width: 580px;
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-note {
+      font-size: 12px !important;
+      margin-top: 20px;
+    }
+
+    .visual {
+      position: relative;
+      background: #ffffff0b;
+      border: 1px solid #ffffff25;
+      border-radius: 30px;
+      padding: 32px 25px;
+      text-align: center;
+      box-shadow: 0 25px 70px #061e252e;
+    }
+
+    .visual svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .visual-label {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--green);
+      padding: 9px 22px;
+      border-radius: 12px;
+      margin-top: 16px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    section { padding: 75px 0; }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .section-kicker {
+      color: #9b6918;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    h2 {
+      color: var(--green);
+      font-size: clamp(25px, 3vw, 35px);
+      line-height: 1.5;
+      margin: 8px 0 12px;
+    }
+
+    .section-heading p,
+    .card p,
+    .about p,
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 35px #153b350b;
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      background: #f5f0df;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--green);
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    .about-section {
+      background: #eef2eb;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 14px;
+      padding: 0;
+      list-style: none;
+      margin-top: 24px;
+      font-size: 14px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .about-panel {
+      background: var(--green);
+      padding: 38px;
+      border-radius: 24px;
+      color: white;
+    }
+
+    .about-panel h3 {
+      color: var(--gold);
+      font-size: 25px;
+    }
+
+    .about-panel p { color: #d5e3db; }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .tags span {
+      padding: 7px 14px;
+      border-radius: 9px;
+      border: 1px solid #ffffff30;
+      font-size: 12px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .step {
+      border-top: 1px solid #ccd7cc;
+      padding-top: 22px;
+    }
+
+    .step-number {
+      color: #9b6918;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .faq-section {
+      padding-top: 0;
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 22px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--green);
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    details p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .contact-section { padding-top: 0; }
+
+    .contact-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      background: var(--green);
+      color: white;
+      border-radius: 25px;
+      padding: 42px;
+    }
+
+    .contact-box h2 {
+      color: white;
+      margin-top: 0;
+      font-size: 29px;
+    }
+
+    .contact-box p {
+      margin: 0;
+      color: #d5e3db;
+      font-size: 14px;
+    }
+
+    .contact-box .btn { flex-shrink: 0; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      nav { gap: 15px; }
+
+      .navbar > .btn { display: none; }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero { padding: 50px 0; }
+
+      .visual {
+        max-width: 470px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      .cards { grid-template-columns: repeat(2, 1fr); }
+
+      .contact-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .navbar {
+        flex-direction: column;
+        padding: 12px 0;
+        gap: 10px;
+      }
+
+      nav {
+        font-size: 12px;
+        gap: 22px;
+      }
+
+      .brand strong { font-size: 21px; }
+
+      .cards,
+      .steps { grid-template-columns: 1fr; }
+
+      section { padding: 50px 0; }
+
+      .card { padding: 24px; }
+
+      .about-panel,
+      .contact-box { padding: 26px; }
+
+      .hero-actions .btn { flex: 1; }
+
+      .hero p { font-size: 14px; }
+
+      .visual { padding: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#" aria-label="الإيمان — الرئيسية">
+        <span class="brand-icon" aria-hidden="true">📦</span>
+        <span>
+          <strong>الإيمان</strong>
+          <small>لنقل العفش بالمدينة المنورة</small>
+        </span>
+      </a>
+
+      <nav aria-label="القائمة الرئيسية">
+        <a href="#services">خدماتنا</a>
+        <a href="#about">من نحن</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+
+      <a class="btn btn-green" href="#contact">اطلب عرض سعر</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">نقل الأثاث داخل المدينة المنورة</span>
+
+          <h1>
+            شركة <span>الإيمان</span><br>
+            لنقل العفش<br>
+            بالمدينة المنورة
+          </h1>
+
+          <p>
+            بداية جديدة في بيتك الجديد تبدأ بنقلة مرتبة.
+            نساعدك في نقل الأثاث وتغليفه وفكّه وتركيبه،
+            مع تنسيق تفاصيل الخدمة حسب احتياجك.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#contact">اطلب عرض سعر الآن ↗</a>
+            <a class="btn btn-outline" href="#services">اكتشف خدماتنا</a>
+          </div>
+
+          <p class="hero-note">نقل منازل ومكاتب • تغليف أثاث • فك وتركيب</p>
+        </div>
+
+        <div class="visual">
+          <svg viewBox="0 0 480 320"
+               role="img"
+               aria-label="رسم توضيحي لشاحنة نقل أثاث وصناديق">
+            <circle cx="245" cy="150" r="135" fill="#ffffff08"/>
+            <path d="M25 272H455" stroke="#ffffff40"
+                  stroke-width="3" stroke-linecap="round"/>
+
+            <rect x="55" y="100" width="245" height="145"
+                  rx="15" fill="#faf8f2"/>
+            <path d="M300 147H357L409 204V245H300Z"
+                  fill="#e9bc69"/>
+            <path d="M318 162H350L381 199H318Z"
+                  fill="#153b35"/>
+
+            <rect x="52" y="234" width="363" height="19"
+                  rx="7" fill="#cfd9d1"/>
+            <rect x="391" y="214" width="17" height="11"
+                  rx="3" fill="#fff2cb"/>
+
+            <circle cx="123" cy="252" r="29" fill="#17332e"/>
+            <circle cx="123" cy="252" r="12" fill="#d7e1d9"/>
+            <circle cx="350" cy="252" r="29" fill="#17332e"/>
+            <circle cx="350" cy="252" r="12" fill="#d7e1d9"/>
+
+            <rect x="143" y="136" width="68" height="64"
+                  rx="5" fill="#e9bc69"/>
+            <path d="M177 136V158M164 170L177 158L190 170"
+                  fill="none" stroke="#85652c" stroke-width="5"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+
+            <rect x="73" y="58" width="64" height="42"
+                  rx="4" fill="#d99c4e"/>
+            <path d="M105 58V79" stroke="#f7d89d" stroke-width="12"/>
+            <rect x="144" y="40" width="80" height="60"
+                  rx="4" fill="#e9bc69"/>
+            <path d="M184 40V66" stroke="#f7dfad" stroke-width="14"/>
+
+            <path d="M37 168H15M37 188H5M37 208H20"
+                  stroke="#e9bc69" stroke-width="5"
+                  stroke-linecap="round"/>
+          </svg>
+
+          <div class="visual-label">من باب بيتك… لبداية جديدة</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">خدماتنا</span>
+          <h2>كل ما تحتاجه لنقل أثاثك</h2>
+          <p>
+            اختر الخدمة المناسبة، وتواصل معنا لتحديد تفاصيل النقل
+            والخدمات المطلوبة.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🚚</div>
+            <h3>نقل العفش</h3>
+            <p>
+              نقل أثاث الشقق والمنازل والفلل داخل المدينة المنورة،
+              مع ترتيب التحميل والتنزيل حسب طبيعة الأثاث.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">📦</div>
+            <h3>تغليف الأثاث</h3>
+            <p>
+              تغليف قطع الأثاث والأجهزة والأغراض القابلة للكسر
+              بمواد مناسبة للمساعدة في حمايتها أثناء النقل.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🛠️</div>
+            <h3>فك وتركيب العفش</h3>
+            <p>
+              تنسيق فك وتركيب غرف النوم والدواليب والمكاتب
+              حسب نوع القطع ومتطلبات التركيب.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🏠</div>
+            <h3>نقل المنازل والفلل</h3>
+            <p>
+              تنظيم نقل محتويات المنزل، من القطع الكبيرة
+              إلى الصناديق الصغيرة، لتسهيل ترتيبها في الوجهة الجديدة.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🏢</div>
+            <h3>نقل المكاتب</h3>
+            <p>
+              نقل المكاتب والكراسي والخزائن ومحتويات مقرات العمل،
+              مع الاتفاق على الموعد المناسب.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🛋️</div>
+            <h3>نقل قطع الأثاث</h3>
+            <p>
+              تحتاج إلى نقل كنب أو غرفة نوم أو قطع محددة؟
+              أرسل تفاصيل القطع وموقعي الاستلام والتسليم.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about">
+          <span class="section-kicker">عن الإيمان</span>
+          <h2>نهتم بالتفاصيل… لتكون نقلتك أسهل</h2>
+          <p>
+            شركة الإيمان لنقل العفش بالمدينة المنورة تقدم خدمات
+            نقل الأثاث للمنازل والمكاتب. نبدأ بفهم احتياجك وتحديد
+            حجم المنقولات والخدمات المطلوبة، ثم نتفق معك على
+            تفاصيل التنفيذ والتكلفة والموعد.
+          </p>
+
+          <ul class="checklist">
+            <li>تحديد متطلبات النقل قبل بدء العمل.</li>
+            <li>تنسيق خدمات التغليف والفك والتركيب حسب الطلب.</li>
+            <li>الاتفاق على السعر ونطاق الخدمة مسبقًا.</li>
+            <li>ترتيب خطوات التحميل والنقل والتنزيل.</li>
+          </ul>
+        </div>
+
+        <div class="about-panel">
+          <h3>نقل العفش بالمدينة المنورة</h3>
+          <p>
+            أخبرنا بحي الاستلام وحي التسليم، وعدد الغرف،
+            والطوابق، وتوافر المصعد، لنساعدك في تحديد
+            متطلبات الخدمة وعرض السعر.
+          </p>
+
+          <div class="tags">
+            <span>منازل</span>
+            <span>شقق</span>
+            <span>فلل</span>
+            <span>مكاتب</span>
+            <span>قطع أثاث</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">خطوات الحجز</span>
+          <h2>رتّب نقلتك في ثلاث خطوات</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">01</div>
+            <h3>أرسل التفاصيل</h3>
+            <p>
+              حدّد الموقعين والموعد المطلوب،
+              وأرسل صور الأثاث إن أمكن.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">02</div>
+            <h3>اتفق على الخدمة</h3>
+            <p>
+              نحدّد معك الخدمات المطلوبة
+              والتكلفة والموعد قبل تأكيد الحجز.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">03</div>
+            <h3>استعد للنقل</h3>
+            <p>
+              جهّز أغراضك الشخصية والثمينة،
+              واترك خطوات النقل المتفق عليها للفريق.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">قبل الحجز</span>
+          <h2>أسئلة شائعة</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>كيف يتم تحديد تكلفة نقل العفش؟</summary>
+            <p>
+              تختلف التكلفة حسب كمية الأثاث والمسافة والطوابق
+              وتوافر المصعد، إضافة إلى خدمات التغليف والفك
+              والتركيب المطلوبة. يُحدّد السعر بعد مراجعة التفاصيل.
+            </p>
+          </details>
+
+          <details>
+            <summary>هل التغليف والفك والتركيب ضمن الخدمة؟</summary>
+            <p>
+              يمكن طلب هذه الخدمات عند الحجز، ويُوضّح ما يشمله
+              عرض السعر قبل الاتفاق على التنفيذ.
+            </p>
+          </details>
+
+          <details>
+            <summary>ما المعلومات المطلوبة لطلب عرض سعر؟</summary>
+            <p>
+              موقع الاستلام والتسليم، وعدد الغرف أو صور القطع،
+              والطوابق، وتوافر المصعد، والموعد المقترح للنقل.
+            </p>
+          </details>
+
+          <details>
+            <summary>هل يمكن نقل قطع أثاث محددة؟</summary>
+            <p>
+              يمكنك الاستفسار عن نقل قطعة واحدة أو عدة قطع
+              بإرسال صورها وأبعادها التقريبية وموقعي النقل.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2>جاهز تنقل عفشك؟</h2>
+            <p>
+              تواصل مع الإيمان وأرسل تفاصيل نقلتك لطلب عرض سعر.
+            </p>
+          </div>
+
+          <!-- استبدل الرقم التالي برقم الشركة مع كود الدولة بدون + -->
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/9665XXXXXXXX?text=مرحبًا،%20أرغب%20في%20عرض%20سعر%20لنقل%20العفش%20بالمدينة%20المنورة"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            تواصل عبر واتساب ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      جميع الحقوق محفوظة © شركة الإيمان لنقل العفش بالمدينة المنورة
+    </div>
+  </footer>
+</body>
+</html>
